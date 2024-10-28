@@ -1,0 +1,125 @@
+.navbar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 250px;
+  background-color: #282828;
+  border-right: 0.5px solid #00000081;
+  overflow-y: auto;
+  transition: width 0.3s ease;
+  overflow-x: hidden;
+  z-index: 100;
+}
+
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/::-webkit-scrollbar */
+.navbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+
+.navbar::-webkit-scrollbar-track {
+  background: #06010e;
+  border-radius: 10px;
+}
+
+
+.navbar::-webkit-scrollbar-thumb {
+  background: #06010f;
+  border-radius: 10px;
+}
+
+
+.navbar::-webkit-scrollbar-thumb:hover {
+  background: #100227;
+}
+
+.navbar.collapsed {
+  width: 50px;
+}
+
+.searchInput {
+  margin-top: 50px;
+  width: 250px;
+}
+
+.dropDownSorting {
+  height: 32px;
+  border: none;
+}
+
+.toggle-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 10px;
+  right: 5px;
+  background: #8bac71;
+  color: #191c16;
+  border: none;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 101;
+}
+
+
+.navbar-content {
+  padding: 10px 0 10px 0;
+
+}
+
+.search-filter {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.task-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  width: 100%;
+}
+
+.task-square {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid rgba(255, 255, 255, 0.068);
+  padding: 10px;
+  color: whitesmoke;
+  text-decoration: none;
+  font-size: 0.8rem;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+
+.task-link {
+  flex: 1 1 auto;
+  font-weight: normal;
+  color: whitesmoke;
+  text-align: left;
+  text-decoration: none;
+  overflow: hidden;
+  text-overflow: ellipsis; /* Will add dots if word becomes too long  https://www.w3schools.com/cssref/css3_pr_text-overflow.php*/
+  white-space: nowrap; /* Wont allow text to break rows */
+}
+.task-link:hover {
+  color: rgb(184, 184, 184);
+}
+
+.deleteBtn {
+  flex-shrink: 0;
+  background: none;
+  border: none;
+  color: rgb(180, 180, 180);
+  font-size: 16px;
+  cursor: pointer;
+  padding: 5px;
+  margin-left: 10px;
+}

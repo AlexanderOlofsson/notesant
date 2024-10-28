@@ -1,0 +1,208 @@
+/* This is NOT only for HomePage but also TaskDetailsPage */
+
+.home-page {
+  padding: 20px;
+}
+
+input {
+  background-color: whitesmoke;
+  color: #030008;
+  font-size: 1.2rem;
+  font-weight: 500;
+  border-color: none;
+}
+
+@keyframes sway {
+  0%, 100% {
+    transform: perspective(600px) rotateY(-30deg) rotateX(0deg);
+  }
+  50% {
+    transform: perspective(600px) rotateY(-28deg) rotateX(2deg);
+  }
+}
+
+.createTaskForm {
+  display: flex;
+  flex-direction: column;
+  margin: 5px 0;
+  width: 500px;
+  height: 420px;
+  align-items: center;
+  background-color: #282828;
+  border: 4px solid #8bac71;
+  border-radius: 8px;
+  position: relative;
+  box-shadow: -5px 20px 15px rgba(0, 0, 0, 0.4), 0px 0px 10px rgba(0, 0, 0, 0.2);
+  animation: sway 5s ease-in-out infinite;
+  transform-style: preserve-3d;
+}
+
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/::before */
+.createTaskForm::before,
+.createTaskForm::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+
+.createTaskForm::before {
+  transform: translateZ(-8px);
+  opacity: 0.9;
+}
+
+.createTaskForm::after {
+  transform: translateZ(-16px);
+  opacity: 0.8;
+}
+
+
+
+#logo {
+  font-size: 56px;
+  font-family: 'Regrade';
+  font-weight: bold;
+  color: whitesmoke;
+
+}
+
+#inputTitle {
+  padding: 5px 0 5px 20px;
+  margin: 0 0 15px 0;
+  height: 32px;
+  width: 80%;
+  border-radius: 5px;
+  border: none;
+}
+
+.dropDown {
+  height: 100%;
+  width: 50%;
+  border: none;
+  margin: 0 5px 0 5px;
+  border-radius: 5px;
+  background-color: whitesmoke;
+  color: #030008;
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 5px 0 5px 20px;
+}
+
+.dropDownContainer {
+  display: flex;
+  justify-content: space-evenly;
+  width: 80%;
+  height: 42px;
+  margin: 15px 0 15px 0;
+}
+
+#inputDescription {
+  padding: 5px 0 5px 20px;
+  margin: 15px 0 15px 0;
+  width: 80%;
+  border-radius: 5px;
+  border-radius: 5px;
+  height: 32px;
+  border: none;
+
+}
+
+
+#createTaskBtn {
+  width: 35%;
+  justify-content: center;
+  align-items: center;
+  margin: 5px 0 5px 0;
+  border-radius: 50px;
+  border: 2px solid #8bac71;
+  background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
+  color: #030008;
+}
+
+
+.taskContainer {
+  height: 220px;
+  padding: 20px;
+  background-color: #3f3f3f;
+  border-radius: 8px;
+  max-width: 600px;
+  overflow: hidden;
+}
+
+
+.noteInputContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.noteInput {
+  background-color: #282828;
+  height: 32px;
+  width: 100%;
+  padding-right: 50px;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  padding-left: 15px;
+  color: whitesmoke;
+  border: none;
+  box-sizing: border-box;
+}
+
+.noteInput:focus {
+  border: none;
+}
+
+.noteBtn, .noteDeleteBtn {
+  position: absolute;
+  right: 0.5px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.062);
+  color: #659143;
+  font-size: 0.9rem;
+  padding: 7px 15px;
+  border-radius: 0 12px 12px 0;
+  cursor: pointer;
+}
+
+.noteBtn {
+  color: #659143;
+}
+
+.noteDeleteBtn {
+  color: rgb(182, 13, 13);
+}
+
+.noteBtn:hover, .noteDeleteBtn:hover {
+  background: #575757;
+}
+
+
+.notesTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: 'Regrade';
+  color: whitesmoke;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+.notesDescription {
+  font-size: 1rem;
+  font-weight: normal;
+  font-family: 'Regrade';
+  color: whitesmoke;
+}
+
+.backBtn {
+  margin-top: 20px;
+}

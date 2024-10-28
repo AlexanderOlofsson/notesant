@@ -5,7 +5,10 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      '/api': 'http://localhost:3000'
+      '/api': {
+        target: 'http://localhost:3000',
     }
-  }
+  },
+  historyApiFallback: true // does this fix the issue? 2024-10-27
+}
 })

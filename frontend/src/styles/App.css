@@ -1,0 +1,42 @@
+@font-face {
+  font-family: 'Regrade';
+  src: url('../assets/fonts/Neue Regrade Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Regrade';
+  src: url('../assets/fonts/Neue Regrade Medium.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Regrade';
+  src: url('../assets/fonts/Neue Regrade Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Regrade-regular', sans-serif;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.app-container {
+  display: flex;
+}
+
+
+
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+}
