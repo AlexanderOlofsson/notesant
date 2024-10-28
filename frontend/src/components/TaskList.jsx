@@ -40,8 +40,8 @@ function TaskList({ tasks, setTasks }) {
       if (filter === 'alphabeticalAZ') return a.title.localeCompare(b.title);
       if (filter === 'alphabeticalZA') return b.title.localeCompare(a.title);
       if (filter === 'priority') return a.priority - b.priority;
-      if (filter === 'categoryAZ') return a.category_name.localeCompare(b.category_name);
-      if (filter === 'categoryZA') return b.category_name.localeCompare(a.category_name);
+      if (filter === 'categoryAZ') return (a.category_name || "").localeCompare(b.category_name || ""); // in case if empty/missing
+      if (filter === 'categoryZA') return (b.category_name || "").localeCompare(a.category_name || "");
       return 0;
     });
 
